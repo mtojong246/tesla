@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar-container {
+    padding: 1rem;
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+
+}
+
+.nav-logo {
+
+    img {
+        height: 1em;
+    }
+}
+
+.nav-option, .side-nav-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+        color: white;
+    }
+}
+
+.nav-option {
+    width: 35rem;
+}
+
+.side-nav-options {
+    width: 10rem;
+}
