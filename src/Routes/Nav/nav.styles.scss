@@ -18,6 +18,8 @@
     z-index: 1;
     width: 100%;
 
+    color: white;
+
 }
 
 .nav-logo {
@@ -31,10 +33,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    span {
-        color: white;
-    }
 }
 
 .nav-option {

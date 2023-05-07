@@ -3,6 +3,7 @@ import Nav from './Routes/Nav/nav.component';
 import Home from './Routes/Home/home.component';
 
 const App = () => {
+
   return (
     <>
       <Nav />

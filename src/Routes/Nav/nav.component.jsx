@@ -2,8 +2,9 @@ import './nav.styles.scss';
 import Logo from '../../Images/tesla-logo-white.svg';
 
 const Nav = () => {
+
     return (
-        <div className='nav-bar-container'>
+        <div className='nav-bar-container' id='nav'>
             <div className='nav-logo'>
                 <img src={Logo} alt='tesla-logo' />
             </div>
