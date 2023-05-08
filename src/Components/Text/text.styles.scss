@@ -6,20 +6,27 @@
 
 
 .text-container {
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    padding: 0 1rem;
-
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
     color: white;
 
+    button:hover {
+        cursor: pointer;
+    }
+
+}
+
+.text-title {
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.text-buttons-container{
+    position: fixed;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
 
 .text-title {
@@ -30,11 +37,61 @@
     }
 
     p {
-        font-size: 1rem;
+        font-size: 12px;
+        margin-top: 0.3rem;
+        text-underline-offset: 4px;
     }
 }
 
 .text-button {
     padding-bottom: 5rem;
-    font-size: 1rem;
+    font-size: 12px;
+
+    button {
+        background: none;
+        padding: 0.5rem 0;
+        border: 3px solid white;
+        border-radius: 5px;
+        color: white;
+        width: 16rem;
+    }
+    
+}
+
+.text-double-buttons {
+    padding-bottom: 5rem;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    button {
+        padding: 0.6rem 0;
+        width: 16rem;
+        border-radius: 5px;
+        border: none;
+    }
+
+    #button-one {
+        background-color: rgba(23, 26, 32, 0.8);
+        color: white;
+
+    }
+
+    #button-two {
+        background-color: rgba(244, 244, 244, 0.65);
+    }
+}
+
+.accessories-button {
+    padding-bottom: 5rem;
+    font-size: 12px;
+
+    button {
+        background-color: rgba(23, 26, 32, 1);
+        color: white;
+        
+        
+    }
 }

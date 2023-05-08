@@ -5,12 +5,12 @@
 }
 
 .nav-bar-container {
-    padding: 1rem;
+    padding: 1rem 3rem;
     background: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 14px;
+    font-size: 12px;
 
     position: fixed;
     top: 0;
@@ -36,9 +36,10 @@
 }
 
 .nav-option {
-    width: 35rem;
+    width: 45rem;
+    padding-left: 5rem;
 }
 
 .side-nav-options {
-    width: 10rem;
+    width: 12rem;
 }
