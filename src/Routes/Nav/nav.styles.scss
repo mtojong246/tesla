@@ -10,15 +10,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 12px;
+    font-size: 14px;
 
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
     width: 100%;
-
-    color: white;
 
 }
 
@@ -27,19 +25,100 @@
     img {
         height: 1em;
     }
+    
+}
+
+.nav-overlay {
+    position: absolute;
+    background-color: rgb(0,0,0);
+	z-index: -1;
+	transition: 0.3s ease left, width, opacity;
+    transition-delay: 250ms;
+    opacity: 0;
+    border-radius: 5px;
+}
+
+.active {
+    opacity: 0.1;
 }
 
 .nav-option, .side-nav-options {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+
+    button {
+        padding: 0.4rem 1rem;
+        border: none;
+        background: none;
+        font-family: 'Museo';
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
 }
 
 .nav-option {
-    width: 45rem;
-    padding-left: 5rem;
+    padding-left: 6rem;
 }
 
-.side-nav-options {
-    width: 12rem;
+
+
+.color-black {
+    animation: color-black 0.3s;
+    color: black;
 }
+
+.color-white {
+    animation: color-white 0.3s;
+    color: white;
+}
+
+.logo-black {
+    animation: logo-black 0.3s;
+    filter: invert(100%);
+}
+
+.logo-white {
+    animation: logo-white 0.3s;
+    filter: invert(0%);
+}
+
+
+@keyframes color-black{
+    from { 
+        color: white;
+    }
+    to { 
+        color: black; 
+    }
+}
+
+@keyframes color-white{
+    from { 
+        filter: invert(100%);
+    }
+    to { 
+        filter: invert(0%);
+     }
+}
+
+@keyframes logo-black{
+    from { 
+        filter: invert(0%);
+    }
+    to { 
+        filter: invert(100%);
+    }
+}
+
+@keyframes logo-white{
+    from { 
+        filter: invert(100%);
+    }
+    to { 
+        filter: invert(0%);
+     }
+}
+

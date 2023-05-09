@@ -7,18 +7,35 @@ const Home = () => {
 
     useEffect(() => {
         const page = document.getElementById('scroll-container');
-        const nav = document.getElementById('nav');
-        const pages = document.querySelectorAll('.page');
+        const navs = document.querySelectorAll('.nav-span')
         const logo = document.getElementById('logo');
+        const pages = document.querySelectorAll('.page');
+        const firstPage = document.querySelector('.first')
+
+        const colorChange = () => {
+            if (Math.abs(firstPage.getBoundingClientRect().top) === 0) {
+                navs.forEach(nav => {
+                    nav.classList.add('color-white');
+                    nav.classList.remove('color-black');
+                    nav.style.color='white';
+                })
+                logo.classList.add('logo-white');
+                logo.classList.remove('logo-black');
+            } else if (Math.abs(firstPage.getBoundingClientRect().top) >= window.innerHeight) {
+                navs.forEach(nav => {
+                    nav.classList.add('color-black');
+                    nav.classList.remove('color-white');
+                    nav.style.color='black'
+                })
+                logo.classList.add('logo-black');
+                logo.classList.remove('logo-white');
+                document.getElementById('title').classList.remove('animate__animated');
+                document.getElementById('description').classList.remove('animate__animated');
+                document.getElementById('button').classList.remove('animate__animated');
+            }
+        }
 
         const handleScroll = () => {
-            if (page.scrollTop > window.innerHeight) {
-                nav.style.color = 'black';
-                logo.style.filter = 'invert(100%) sepia(4%) saturate(7450%) hue-rotate(32deg) brightness(119%) contrast(98%)';
-            } else {
-                nav.style.color = 'white';
-                logo.style.filter = 'invert(0%) sepia(4%) saturate(16%) hue-rotate(109deg) brightness(96%) contrast(103%)';
-            }
 
             for (let i=0; i<pages.length; i++) {
                 let distanceToTop = (pages[i].getBoundingClientRect().top);
@@ -27,16 +44,16 @@ const Home = () => {
 
                 let opacity = 1;
                 if (scrollTop > distanceToTop) {
-                    opacity = (1 - (scrollTop - distanceToTop) / elementHeight) - 0.35;
+                    opacity = (1 - (scrollTop - distanceToTop)*4/ elementHeight);
                 } else if (scrollTop === distanceToTop) {
                     opacity = 1;
                 } else if (scrollTop < distanceToTop && distanceToTop <= (window.innerHeight)*(0.35)) {
-                    opacity = (1 - distanceToTop / elementHeight) - 0.65;
+                    opacity = (1 - (distanceToTop*4) / elementHeight);
                 } else {
                     opacity = 0;
                 }
 
-                if (opacity >= 0) {
+                if (opacity > 0) {
                     pages[i].firstChild.style.opacity = opacity;
                     pages[i].firstChild.style.display = 'block';
 
@@ -47,18 +64,18 @@ const Home = () => {
             }
         }
 
-        page.addEventListener('scroll', handleScroll)
+        page.addEventListener('scroll', () => {handleScroll(); colorChange()})
 
         return () => {
-            page.removeEventListener('scroll', handleScroll)
+            page.removeEventListener('scroll', () => {handleScroll(); colorChange()})
         }
         
     }, [])
 
     return (
         <div className='homepage-container' id='scroll-container'>
-                <div className='homepage-video-container page'>
-                    <div className='homepage-text-container' style={{opacity: 1}}>
+                <div className='homepage-video-container page first'>
+                    <div className='homepage-text-container' style={{opacity: 1, display: 'block'}}>
                         <Text title='Experience Tesla' desc='Schedule a Demo Drive Today'/>
                     </div>
                     <video autoPlay muted loop id="video">
@@ -66,37 +83,37 @@ const Home = () => {
                     </video>
                 </div>
                 <div className='homepage-model3-container page'>
-                    <div className='homepage-text-container' style={{opacity: 0}}>
+                    <div className='homepage-text-container' style={{opacity: 0, display: 'none'}}>
                         <Text title='Model 3' desc='View Inventory'/>
                     </div>
                 </div>
                 <div className='homepage-modelY-container page'>
-                    <div className='homepage-text-container' style={{opacity: 0}}>
+                    <div className='homepage-text-container' style={{opacity: 0, display: 'none'}}>
                         <Text title='Model Y' desc='View Inventory'/>
                     </div>
                 </div>
                 <div className='homepage-modelS-container page'>
-                    <div className='homepage-text-container' style={{opacity: 0}}>
+                    <div className='homepage-text-container' style={{opacity: 0, display: 'none'}}>
                         <Text title='Model S' desc='View Inventory'/>
                     </div>
                 </div>
                 <div className='homepage-modelX-container page'>
-                    <div className='homepage-text-container' style={{opacity: 0}}>
+                    <div className='homepage-text-container' style={{opacity: 0, display: 'none'}}>
                         <Text title='Model X' desc='View Inventory'/>
                     </div>
                 </div>
                 <div className='homepage-solar-panel-container page'>
-                    <div className='homepage-text-container' style={{opacity: 0}}>
+                    <div className='homepage-text-container' style={{opacity: 0, display: 'none'}}>
                         <Text title='Solar Panel' desc='Lowest Cost Solar Panels in America'/>
                     </div>
                 </div>
                 <div className='homepage-solar-roof-container page'>
-                    <div className='homepage-text-container' style={{opacity: 0}}>
+                    <div className='homepage-text-container' style={{opacity: 0, display: 'none'}}>
                         <Text title='Solar Roof' desc='Produce Clean Energy From Your Roof'/>
                     </div>
                 </div>
                 <div className='homepage-accessories-container page'>
-                    <div className='homepage-text-container' style={{opacity: 0}}>
+                    <div className='homepage-text-container' style={{opacity: 0, display: 'none'}}>
                         <Text title='Accessories' desc=''/>
                     </div>
                 </div>

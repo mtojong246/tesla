@@ -43,6 +43,11 @@
     }
 }
 
+.text-title {
+    animation: fadeInUp;
+    animation-delay: 3s;
+}
+
 .text-button {
     padding-bottom: 5rem;
     font-size: 12px;
@@ -54,6 +59,7 @@
         border-radius: 5px;
         color: white;
         width: 16rem;
+        font-family: 'Museo';
     }
     
 }
@@ -71,6 +77,7 @@
         width: 16rem;
         border-radius: 5px;
         border: none;
+        font-family: 'Museo';
     }
 
     #button-one {
@@ -91,6 +98,7 @@
     button {
         background-color: rgba(23, 26, 32, 1);
         color: white;
+        font-family: 'Museo';
         
         
     }

@@ -4,7 +4,12 @@ body, html {
   height: 100%;
   box-sizing: border-box;
   font-size: 14px;
-  font-family: 'Gotham SSm', sans-serif;
+  font-family: 'Museo', sans-serif;
+}
+
+@font-face {
+  font-family: 'Museo';
+  src: local('Museo'), url('./Fonts/MuseoSans_500.ttf') format('truetype');
 }
 
 

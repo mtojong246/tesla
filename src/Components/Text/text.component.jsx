@@ -4,8 +4,12 @@ const Text = ({title, desc}) => {
     return (
         <div className='text-container'>
             <div className='text-title' style={{color: `${title === 'Experience Tesla' ? 'white' : 'black'}`}}>
-                <span id='text-span'>{title}</span>
-                <p id='text-p' style={{textDecoration: `${title.includes('Model') ? 'underline' : 'none'}`}}>{desc}</p>
+                <div id='title' className={`${title === 'Experience Tesla' ? 'animate__animated animate__fadeInUp animate__delay-1s' : ''}`}>
+                    <span>{title}</span>
+                </div>
+                <div id='description' className={`${title === 'Experience Tesla' ? 'animate__animated animate__fadeInUp animate__delay-2s' : ''}`}>
+                    <p style={{textDecoration: `${title.includes('Model') ? 'underline' : 'none'}`}}>{desc}</p>
+                </div>
             </div>
             <div className='text-buttons-container'>
             {title.includes('Model') || title.includes('Solar') ? (
@@ -16,7 +20,7 @@ const Text = ({title, desc}) => {
             ) : (
                 <>
                 {title === 'Experience Tesla' ? (
-                    <div className='text-button'>
+                    <div id='button' className='text-button animate__animated animate__fadeInUp animate__delay-2s'>
                         <button>Demo Drive</button>
                     </div>
                 ) : (
