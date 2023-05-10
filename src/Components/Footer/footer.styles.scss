@@ -1,0 +1,19 @@
+.footer-container {
+    position: absolute;
+    bottom: 1.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.75rem;
+    color: #5C5E62;
+
+    span:hover {
+        cursor: pointer;
+    }
+}

@@ -1,8 +1,12 @@
 import './nav.styles.scss';
 import Logo from '../../Images/tesla-logo-white.svg';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import Menu from '../../Components/Menu/menu.component';
 
 const Nav = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
     useEffect(() => {
         const overlay = document.querySelector('.nav-overlay');
@@ -42,8 +46,9 @@ const Nav = () => {
             <div className='side-nav-options'>
                 <button className='nav-span' style={{color: 'white'}}>Shop</button>
                 <button className='nav-span' style={{color: 'white'}}>Account</button>
-                <button className='nav-span' style={{color: 'white'}}>Menu</button>
+                <button className='nav-span' style={{color: 'white'}} onClick={toggleMenu}>Menu</button>
             </div>
+            <Menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
         </div>
     )
 }

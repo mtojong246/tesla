@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import './home.styles.scss';
 import Text from '../../Components/Text/text.component';
-
+import Footer from '../../Components/Footer/footer.component';
 
 const Home = () => {
 
@@ -10,7 +10,8 @@ const Home = () => {
         const navs = document.querySelectorAll('.nav-span')
         const logo = document.getElementById('logo');
         const pages = document.querySelectorAll('.page');
-        const firstPage = document.querySelector('.first')
+        const firstPage = document.querySelector('.first');
+        const footer = document.getElementById('footer');
 
         const colorChange = () => {
             if (Math.abs(firstPage.getBoundingClientRect().top) === 0) {

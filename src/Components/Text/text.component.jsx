@@ -1,3 +1,4 @@
+import Footer from '../Footer/footer.component';
 import './text.styles.scss';
 
 const Text = ({title, desc}) => {
@@ -7,9 +8,15 @@ const Text = ({title, desc}) => {
                 <div id='title' className={`${title === 'Experience Tesla' ? 'animate__animated animate__fadeInUp animate__delay-1s' : ''}`}>
                     <span>{title}</span>
                 </div>
-                <div id='description' className={`${title === 'Experience Tesla' ? 'animate__animated animate__fadeInUp animate__delay-2s' : ''}`}>
-                    <p style={{textDecoration: `${title.includes('Model') ? 'underline' : 'none'}`}}>{desc}</p>
+                {title.includes('Model') ? (
+                <div id='description'>
+                    <p className='description-model'>{desc}</p>
                 </div>
+                ) : (
+                <div id='description' className={`${title === 'Experience Tesla' ? 'animate__animated animate__fadeInUp animate__delay-2s' : ''}`}>
+                    <p>{desc}</p>
+                </div>
+                )}
             </div>
             <div className='text-buttons-container'>
             {title.includes('Model') || title.includes('Solar') ? (
@@ -31,6 +38,11 @@ const Text = ({title, desc}) => {
                 </>
             )}
             </div>
+            {title.includes('Accessories') ? (
+                <Footer />
+            ) : (
+                <></>
+            )}
         </div>
     )
 }
