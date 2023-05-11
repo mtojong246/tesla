@@ -39,7 +39,9 @@ const Text = ({title, desc}) => {
             )}
             </div>
             {title.includes('Accessories') ? (
-                <Footer />
+                <div className='text-footer-container' style={{display: `${window.innerWidth > 625 ? 'block' : 'none'}`}}>
+                    <Footer/>
+                </div>
             ) : (
                 <></>
             )}

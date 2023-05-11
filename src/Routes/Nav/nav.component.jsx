@@ -6,7 +6,9 @@ import Menu from '../../Components/Menu/menu.component';
 const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    }
 
     useEffect(() => {
         const overlay = document.querySelector('.nav-overlay');
@@ -44,11 +46,11 @@ const Nav = () => {
                 <button className='nav-span' style={{color: 'white'}}>Powerwall</button>
             </div>
             <div className='side-nav-options'>
-                <button className='nav-span' style={{color: 'white'}}>Shop</button>
-                <button className='nav-span' style={{color: 'white'}}>Account</button>
+                <button id='shop' className='nav-span' style={{color: 'white'}}>Shop</button>
+                <button id='account' className='nav-span' style={{color: 'white'}}>Account</button>
                 <button className='nav-span' style={{color: 'white'}} onClick={toggleMenu}>Menu</button>
             </div>
-            <Menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+            <Menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}/>
         </div>
     )
 }

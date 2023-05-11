@@ -3,6 +3,7 @@ import Xmark from '../../Images/x-mark.svg';
 
 const Menu = ({ isMenuOpen, toggleMenu }) => {
     return (
+        <>
         <div className= {`menu-container ${isMenuOpen ? 'animate__animated animate__fadeInRight' : 'animate__animated animate__fadeOutRight'}`}>
             <div className='menu-exit'>
                 <button onClick={toggleMenu}><img src={Xmark} alt='x' /></button>
@@ -27,6 +28,12 @@ const Menu = ({ isMenuOpen, toggleMenu }) => {
                 <button><span>Investor Relations</span></button>
             </div>
         </div>
+        {isMenuOpen ? (
+            <div className='overlay'></div>
+        ) : (
+            <></>
+        )}
+        </>
     )
 }
 
