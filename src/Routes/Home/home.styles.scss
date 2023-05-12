@@ -105,5 +105,35 @@
     height: 100vh;
 }
 
+@media screen and (max-width: 625px) {
+    .homepage-model3-container {
+        background-image: url('https://digitalassets.tesla.com/tesla-contents/image/upload/h_1624,w_750,c_fit,f_auto,q_auto:best/Model-S-homepage-mobile');
+    }
+
+    .homepage-modelY-container {
+        background-image: url('https://digitalassets.tesla.com/tesla-contents/image/upload/h_2100,w_800,c_fit,f_auto,q_auto:best/Homepage-ModelY-LHD-Mobile');
+    }
+
+    .homepage-modelS-container {
+        background-image: url('https://digitalassets.tesla.com/tesla-contents/image/upload/h_1624,w_750,c_fit,f_auto,q_auto:best/Model-S-homepage-mobile');
+    }
+
+    .homepage-modelX-container {
+        background-image: url('https://digitalassets.tesla.com/tesla-contents/image/upload/h_1700,w_800,c_fit,f_auto,q_auto:best/Homepage-Model-X-Mobile-LHD_001');
+    }
+
+    .homepage-solar-panel-container {
+        background-image: url('https://digitalassets.tesla.com/tesla-contents/image/upload/h_1576,w_600,c_fit,f_auto,q_auto:best/Homepage-SolarPanels-Mobile');
+    }
+
+    .homepage-solar-roof-container {
+        background-image: url('https://digitalassets.tesla.com/tesla-contents/image/upload/h_2100,w_800,c_fit,f_auto,q_auto:best/Homepage-SolarRoof-Mobile');
+    }
+
+    .homepage-accessories-container {
+        background-image: url('https://digitalassets.tesla.com/tesla-contents/image/upload/h_2100,w_800,c_fit,f_auto,q_auto:best/Homepage-Accessories-Mobile');
+    }
+}
+
 
 

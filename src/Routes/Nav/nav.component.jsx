@@ -1,15 +1,9 @@
 import './nav.styles.scss';
 import Logo from '../../Images/tesla-logo-white.svg';
-import { useEffect, useState } from 'react';
-import Menu from '../../Components/Menu/menu.component';
+import { useEffect} from 'react';
 
-const Nav = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    }
-
+const Nav = ({toggleMenu}) => {
+    
     useEffect(() => {
         const overlay = document.querySelector('.nav-overlay');
         const spanList = document.querySelectorAll('.nav-span');
@@ -50,7 +44,6 @@ const Nav = () => {
                 <button id='account' className='nav-span' style={{color: 'white'}}>Account</button>
                 <button className='nav-span' style={{color: 'white'}} onClick={toggleMenu}>Menu</button>
             </div>
-            <Menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}/>
         </div>
     )
 }

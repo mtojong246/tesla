@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 14px;
+    font-size: 16px;
 
     position: fixed;
     top: 0;
@@ -55,6 +55,7 @@
         border: none;
         background: none;
         font-family: 'Museo';
+        font-size: 16px;
     }
 
     button:hover {
@@ -149,12 +150,28 @@
         button {
             background-color: rgba(0,0,0,0.3);
             border-radius: 5px;
+            font-size: 16px;
         }
     }
 }
 
 @media screen and (max-width: 625px) {
+    .nav-logo {
+        img {
+            height: 20px;
+        }
+    }
+    
     .nav-bar-container {
         padding: 1rem;
+    }
+
+    .side-nav-options {
+        button {
+            background-color: rgba(0,0,0,0.3);
+            border-radius: 5px;
+            font-size: 20px;
+            padding: 0.5rem 1rem;
+        }
     }
 }

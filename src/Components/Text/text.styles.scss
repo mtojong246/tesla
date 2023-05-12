@@ -17,7 +17,7 @@
 
 .text-title {
     position: fixed;
-    top: 0%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, 0%);
     z-index: 0;
@@ -36,20 +36,19 @@
 
 .text-buttons-container{
     position: fixed;
-    top: 88%;
+    bottom: 10%;
     left: 50%;
     transform: translate(-50%, 0%);
 }
 
 .text-title {
-    padding-top: 8rem;
     
     span {
         font-size: 40px;
     }
 
     p {
-        font-size: 14px;
+        font-size: 16px;
         margin-top: 0.3rem;
         text-underline-offset: 4px;
     }
@@ -60,9 +59,7 @@
     animation-delay: 3s;
 }
 
-.text-button {
-    padding-bottom: 5rem;
-    font-size: 14px;
+.text-button {   
 
     button {
         background: none;
@@ -72,13 +69,12 @@
         color: white;
         width: 16rem;
         font-family: 'Museo';
+        font-size: 16px;
     }
     
 }
 
 .text-double-buttons {
-    padding-bottom: 5rem;
-    font-size: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,6 +86,7 @@
         border-radius: 5px;
         border: none;
         font-family: 'Museo';
+        font-size: 16px;
     }
 
     #button-one {
@@ -104,8 +101,6 @@
 }
 
 .accessories-button {
-    padding-bottom: 5rem;
-    font-size: 14px;
 
     button {
         background-color: rgba(23, 26, 32, 1);
@@ -115,20 +110,29 @@
         width: 16rem;
         border-radius: 5px;
         border: none;
+        font-size: 16px;
         
         
     }
 }
 
+
 @media screen and (max-width: 625px) {
     .text-title {
-        padding-top: 12rem;
         width: 90%;
+
+        span {
+            font-size: 52px;
+        }
+
+        p {
+            font-size: 20px;
+        }
     }
 
     .text-buttons-container{
         position: fixed;
-        top: 90%;
+        top: 80%;
         left: 50%;
         transform: translate(-50%, 0%);
         width: 100vw;
@@ -141,6 +145,8 @@
         
         button {
             width: 100%;
+            font-size: 20px;
+            padding: 1rem 0;
         }
     }
     
@@ -150,6 +156,8 @@
 
         button {
             width: 100%;
+            font-size: 20px;
+            padding: 1rem 0;
         }
     }
 }

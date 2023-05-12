@@ -3,8 +3,17 @@ body, html {
   padding: 0;
   height: 100%;
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Museo', sans-serif;
+}
+
+body {
+  overflow: hidden;
+  touch-action: none;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 @font-face {

@@ -8,7 +8,7 @@
     height: 100vh;
     padding: 1rem 1rem 1rem 1.5rem;
     color: #393C41;
-    font-size: 13px;
+    font-size: 16px;
     z-index: 1;
 }
 
@@ -18,8 +18,8 @@
     text-align: right;
 
     img {
-        height: 13px;
-        width: 13px;
+        height: 16px;
+        width: 16px;
     }
 
     button {
@@ -47,7 +47,7 @@
         text-align: left;
         padding: 5px 10px;
         color: #393C41;
-        font-size: 13px;
+        font-size: 16px;
         font-family: 'Museo', sans-serif;
         transition: background-color 0.3s ease-in;
         border-radius: 5px;
@@ -58,4 +58,29 @@
         cursor: pointer;
     }
     
+}
+
+@media screen and (max-width: 625px) {    
+    .menu-options {
+        gap: 20px;
+        button {
+            font-size: 20px;
+        }
+    }
+
+    .menu-exit {
+        height: 6rem;
+        img {
+            height: 20px;
+            width: 20px;
+        }
+
+        button {
+            padding: 20px;
+        }
+
+        button:hover  {
+            background-color: rgba(0,0,0,0)
+        }
+    }
 }
