@@ -2,8 +2,8 @@ import './footer.styles.scss';
 
 const Footer = () => {
     return (
-        <div className='footer-container' id='footer' style={{display: `${window.innerWidth > 625 ? 'block' : 'none'}`}}>
-            <div className='footer-options'>
+        <div className='footer-container' id='footer' >
+            <div className='footer-options' style={{display: `${window.innerWidth > 625 ? 'block' : 'none'}`}}>
                 <span>Tesla &#169; 2023</span>
                 <span>Privacy & Legal</span>
                 <span>Vehicle Recalls</span>
