@@ -2,6 +2,7 @@ import './menu.styles.scss';
 import Xmark from '../../Images/x-mark.svg';
 
 const Menu = ({ isMenuOpen, toggleMenu }) => {
+
     return (
         <>
         <div className= {`menu-container ${isMenuOpen ? 'animate__animated animate__fadeInRight' : 'animate__animated animate__fadeOutRight'}`}>

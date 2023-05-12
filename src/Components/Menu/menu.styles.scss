@@ -83,6 +83,10 @@
     z-index: 0;
 }
 
+.hide {
+    display: none;
+}
+
 @media screen and (max-width: 625px) {    
     .menu-options-container {
         padding-bottom: 6rem;
