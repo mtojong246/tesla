@@ -8,24 +8,26 @@ const Menu = ({ isMenuOpen, toggleMenu }) => {
             <div className='menu-exit'>
                 <button onClick={toggleMenu}><img src={Xmark} alt='x' /></button>
             </div>
-            <div className='menu-options'>
-                <button><span>Existing Inventory</span></button>
-                <button><span>Used Inventory</span></button>
-                <button><span>Trade-In</span></button>
-                <button><span>Demo Drive</span></button>
-                <button><span>Insurance</span></button>
-                <button><span>Fleet</span></button>
-                <button><span>Cybertruck</span></button>
-                <button><span>Roadster</span></button>
-                <button><span>Semi</span></button>
-                <button><span>Charging</span></button>
-                <button><span>Commercial Energy</span></button>
-                <button><span>Utilities</span></button>
-                <button><span>Careers</span></button>
-                <button><span>Find Us</span></button>
-                <button><span>Events</span></button>
-                <button><span>Support</span></button>
-                <button><span>Investor Relations</span></button>
+            <div className='menu-options-container'>
+                <div className='menu-options'>
+                    <button><span>Existing Inventory</span></button>
+                    <button><span>Used Inventory</span></button>
+                    <button><span>Trade-In</span></button>
+                    <button><span>Demo Drive</span></button>
+                    <button><span>Insurance</span></button>
+                    <button><span>Fleet</span></button>
+                    <button><span>Cybertruck</span></button>
+                    <button><span>Roadster</span></button>
+                    <button><span>Semi</span></button>
+                    <button><span>Charging</span></button>
+                    <button><span>Commercial Energy</span></button>
+                    <button><span>Utilities</span></button>
+                    <button><span>Careers</span></button>
+                    <button><span>Find Us</span></button>
+                    <button><span>Events</span></button>
+                    <button><span>Support</span></button>
+                    <button><span>Investor Relations</span></button>
+                </div>
             </div>
         </div>
         {isMenuOpen ? (

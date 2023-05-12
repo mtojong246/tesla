@@ -1,5 +1,5 @@
 import './nav.styles.scss';
-import Logo from '../../Images/tesla-logo-white.svg';
+import Logo from '../../Images/tesla-logo-white.png';
 import { useEffect} from 'react';
 
 const Nav = ({toggleMenu}) => {
