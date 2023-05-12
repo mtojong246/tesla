@@ -10,6 +10,19 @@ const Menu = ({ isMenuOpen, toggleMenu }) => {
             </div>
             <div className='menu-options-container'>
                 <div className='menu-options'>
+                {window.innerWidth <= 1200 ? (
+                    <>
+                    <button><span>Model S</span></button>
+                    <button><span>Model 3</span></button>
+                    <button><span>Model X</span></button>
+                    <button><span>Model Y</span></button>
+                    <button><span>Solar Roof</span></button>
+                    <button><span>Solar Panel</span></button>
+                    <button><span>Powerwall</span></button>
+                    </>
+                ) : (
+                    <></>
+                )}
                     <button><span>Existing Inventory</span></button>
                     <button><span>Used Inventory</span></button>
                     <button><span>Trade-In</span></button>

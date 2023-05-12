@@ -84,6 +84,10 @@
 }
 
 @media screen and (max-width: 625px) {    
+    .menu-options-container {
+        padding-bottom: 6rem;
+    }
+
     .menu-options {
         gap: 20px;
         button {
@@ -100,10 +104,12 @@
 
         button {
             padding: 20px;
+            background: none;
         }
 
         button:hover  {
-            background-color: rgba(0,0,0,0)
+            background-color: rgba(0,0,0,0);
+            background: none;
         }
     }
 }
