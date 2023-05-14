@@ -12,7 +12,7 @@ const Home = () => {
         const firstPage = document.querySelector('.first');
 
         const colorChange = () => {
-            if (Math.abs(firstPage.getBoundingClientRect().top) === 0) {
+            if (Math.abs(firstPage.getBoundingClientRect().top) < window.innerHeight*0.95) {
                 navs.forEach(nav => {
                     nav.classList.add('color-white');
                     nav.classList.remove('color-black');
@@ -20,7 +20,7 @@ const Home = () => {
                 })
                 logo.classList.add('logo-white');
                 logo.classList.remove('logo-black');
-            } else if (Math.abs(firstPage.getBoundingClientRect().top) >= window.innerHeight) {
+            } else if (Math.abs(firstPage.getBoundingClientRect().top) >= window.innerHeight*0.95) {
                 navs.forEach(nav => {
                     nav.classList.add('color-black');
                     nav.classList.remove('color-white');
@@ -77,7 +77,7 @@ const Home = () => {
                     <div className='homepage-text-container' style={{opacity: 1, display: 'block'}}>
                         <Text title='Experience Tesla' desc='Schedule a Demo Drive Today'/>
                     </div>
-                    <video autoPlay muted loop id="video">
+                    <video autoPlay muted loop playsInline id="video">
                         <source src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto/Homepage-Test_Drive-NA-Desktop.mp4" type="video/mp4" />
                     </video>
                 </div>
